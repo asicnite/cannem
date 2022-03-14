@@ -354,7 +354,6 @@ body{
     margin: 0 !important;
     border-radius: 5px;
     padding: 7px 0px !important;
-    border-bottom: 1px solid #eee;
     transition: border .3s, background .1s !important;
 }
 

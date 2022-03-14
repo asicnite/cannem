@@ -12,9 +12,6 @@ body, .bodydiv
 a.titleBar_link:hover {
     background: #2222222f;
 }
-.titleBar{
-    background-color: #111;
-}
 .bimg {
     background: #333;
     filter: brightness(0.25) blur(0.3em);
@@ -31,7 +28,9 @@ a.titleBar_link:hover {
 .menu_list_item:hover {
     background: #2D2D2D !important;
 }
-
+.file-into{
+    color:#DDD
+}
 .cannem-item {
   color: #F0F0F0;
 }
