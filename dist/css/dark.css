@@ -23,14 +23,14 @@ a.titleBar_link:hover {
   
 }
 .menu_list .menu_list_item {
-    color: #F0F0F0;
+    color: #F0F0F0 !important;
 }
 
 .menu_list_item:hover {
     background: #2D2D2D !important;
 }
 .file-into{
-    color:#DDD
+    color:#DDD !important;
 }
 .cannem-item {
   color: #F0F0F0;
@@ -87,6 +87,11 @@ table tbody tr:nth-of-type(even) {
     color: #FFFFFFFF;
     border-bottom: 1px solid #FFFFFFFF;
 }
+
+.mdui-list>.th {
+    border-bottom: 1px solid #090909;
+}
+
 
 .sidenav{
 

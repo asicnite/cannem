@@ -14,20 +14,14 @@ body{
     transition: 0.3s !important;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
-
 .titleBar {
-    box-shadow:none !important;
     color: #333333;
-    position: relative;
-    background: #FFFFFF;
+    background: #00000022;
     box-shadow: 0px 2px 40px rgb(0 0 0 / 10%) !important;
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(1em);
+    backdrop-filter: blur(0.6em);
+    transition :background 0.4s;
     z-index: 100;
     top: 0;
 }
@@ -397,6 +391,12 @@ body{
 
 .mdui-dialog-actions .mdui-btn , .mdui-select-menu-item[selected]{
     color: #65b2ff;
+}
+
+.mdui-list>.th {
+    background-color: initial;
+    border-bottom: 1px solid #EEE;
+    border-radius: 0px;
 }
 
 #count {

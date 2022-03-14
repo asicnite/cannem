@@ -129,6 +129,24 @@ html += `
     $('#head_md').hide().html('');
 }
 
+$(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
+    var top = $(window).scrollTop();
+    var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
+
+    if(!isMobileDevice){
+        if(top >= 300 && !darkMode){
+            $(".titleBar").css("background", "#FFFFFF11");
+            $(".ttitleBar_link").css("color", "#333");
+        }
+    }
+    else{
+        if(top >= 250 && !darkMode){
+            $(".titleBar").css("background", "#FFFFFF11");
+            $(".ttitleBar_link").css("color", "#333");
+        }
+    }
+})
+
 const Os = {
     isWindows: navigator.platform.toUpperCase().indexOf('WIN') > -1, // .includes
     isMac: navigator.platform.toUpperCase().indexOf('MAC') > -1,
@@ -442,7 +460,6 @@ function append_files_to_list(path, files) {
         }
 
         item['modifiedTime'] = utc2beijing(item['modifiedTime']);
-        item['modifiedTime'] = ((item['modifiedTime'].indexOf(((new Date()).getYear() + 1900).toString()) >= 0 ) ? item['modifiedTime'].substr(5) : item['modifiedTime']);
 
         item['size'] = formatFileSize(item['size']);
         if (item['mimeType'] == 'application/vnd.google-apps.folder') {
@@ -503,7 +520,7 @@ function append_files_to_list(path, files) {
 	    }
 	    html += `</i>
                 <div class="file-title">${item.name}</div>
-                <div class="file-info">${item['modifiedTime']} - ${item['size']}</div>
+                <div class="file-info">时间：${item['modifiedTime']} 大小：${item['size']}</div>
             </div>
             <div class="mdui-col-sm-3 mdui-text-right">${item['modifiedTime']}</div>
             <div class="mdui-col-sm-2 mdui-text-right">${item['size']}</div>`
