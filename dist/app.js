@@ -129,32 +129,32 @@ html += `
     $('#head_md').hide().html('');
 }
 
-$(window).ready(function() {
+$(document).ready(function() {
     $(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
         var top = $(window).scrollTop();
         var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
 
         if(!isMobileDevice){
             if(top >= 300 && !darkMode){
-                $(".titleBar").css("background", "##00000022");
-                $(".ttitleBar_link").css("color", "#333");
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".titleBar_link").css("color", "#333");
                 console.log("变色")
             }
             else if(top < 300 && !darkMode){
-                $(".titleBar").css("background", "#FFFFFF11");
-                $(".ttitleBar_link").css("color", "#FFF");
+                $(".titleBar").css("background", "#00000022");
+                $(".titleBar_link").css("color", "#FFFFFF");
                 console.log("变回")
             }
         }
         else{
             if(top >= 250 && !darkMode){
-                $(".titleBar").css("background", "##00000022");
-                $(".ttitleBar_link").css("color", "#333");
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".titleBar_link").css("color", "#333");
                 console.log("变色")
             }
             else if(top < 250 && !darkMode){
-                $(".titleBar").css("background", "#FFFFFF11");
-                $(".ttitleBar_link").css("color", "#FFF");
+                $(".titleBar").css("background", "#00000022");
+                $(".titleBar_link").css("color", "#FFFFFF");
                 console.log("变回")
             }
         }

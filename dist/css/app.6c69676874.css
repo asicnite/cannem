@@ -291,8 +291,8 @@ body{
 }
 
 .folder > div i {
-    color: #65b2ff;
-    color: #fabc37 !important;
+    color: #fabc37;
+    color: #65b2ff !important;
     margin-right: 13px;
     font-size: 2em;
 }
