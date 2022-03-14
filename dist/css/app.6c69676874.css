@@ -102,6 +102,7 @@ body{
     padding: .5rem .75rem;
     position: relative;
     transition :0.4s;
+    color:#FFF;
 }
 
 .titleBar_link>i {

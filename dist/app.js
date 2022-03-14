@@ -135,14 +135,26 @@ $(window).scroll(function(){            //浅色模式下，当titleBar越过bim
 
     if(!isMobileDevice){
         if(top >= 300 && !darkMode){
-            $(".titleBar").css("background", "#FFFFFF11");
+            $(".titleBar").css("background", "##00000022");
             $(".ttitleBar_link").css("color", "#333");
+            console.log("变色")
+        }
+        else if(top < 300 && !darkMode){
+            $(".titleBar").css("background", "#FFFFFF11");
+            $(".ttitleBar_link").css("color", "#FFF");
+            console.log("变回")
         }
     }
     else{
         if(top >= 250 && !darkMode){
-            $(".titleBar").css("background", "#FFFFFF11");
+            $(".titleBar").css("background", "##00000022");
             $(".ttitleBar_link").css("color", "#333");
+            console.log("变色")
+        }
+        else if(top < 250 && !darkMode){
+            $(".titleBar").css("background", "#FFFFFF11");
+            $(".ttitleBar_link").css("color", "#FFF");
+            console.log("变回")
         }
     }
 })
