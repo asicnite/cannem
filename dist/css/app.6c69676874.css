@@ -16,7 +16,7 @@ body{
 
 .titleBar {
     color: #333333;
-    background: #00000022;
+    background: #00000044;
     box-shadow: 0px 2px 40px rgb(0 0 0 / 10%) !important;
     position: fixed;
     width: 100%;
@@ -267,6 +267,7 @@ body{
     position:absolute; 
     top: 260px;
     width: 100%;
+    max-width:860px;
     height: 40px;
 }
 .mdui-toolbar .mdui-icon {

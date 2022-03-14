@@ -77,7 +77,7 @@ function init() {
 <div class="mdui-container">
 <a class="large-title" href="/">${title}</a>
 <span class="description">${description}</span>
-<div id="nav" class="mdui-toolbar cannem-item nav-style titleBar_container"> </div>
+<div id="nav" class="mdui-toolbar cannem-item nav-style"> </div>
 </div>
 <header class="titleBar">
   <dir class="titleBar_container">
@@ -128,38 +128,6 @@ html += `
     $('#readme_md').hide().html('');
     $('#head_md').hide().html('');
 }
-
-$(document).ready(function() {
-    $(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
-        var top = $(window).scrollTop();
-        var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
-
-        if(!isMobileDevice){
-            if(top >= 300 && !darkMode){
-                $(".titleBar").css("background", "#FFFFFF11");
-                $(".titleBar_link").css("color", "#333");
-                console.log("变色")
-            }
-            else if(top < 300 && !darkMode){
-                $(".titleBar").css("background", "#00000022");
-                $(".titleBar_link").css("color", "#FFFFFF");
-                console.log("变回")
-            }
-        }
-        else{
-            if(top >= 250 && !darkMode){
-                $(".titleBar").css("background", "#FFFFFF11");
-                $(".titleBar_link").css("color", "#333");
-                console.log("变色")
-            }
-            else if(top < 250 && !darkMode){
-                $(".titleBar").css("background", "#00000022");
-                $(".titleBar_link").css("color", "#FFFFFF");
-                console.log("变回")
-            }
-        }
-    })
-});
 
 const Os = {
     isWindows: navigator.platform.toUpperCase().indexOf('WIN') > -1, // .includes
@@ -534,7 +502,7 @@ function append_files_to_list(path, files) {
 	    }
 	    html += `</i>
                 <div class="file-title">${item.name}</div>
-                <div class="file-info">时间：${item['modifiedTime']} 大小：${item['size']}</div>
+                <div class="file-info">${item['modifiedTime']} - ${item['size']}</div>
             </div>
             <div class="mdui-col-sm-3 mdui-text-right">${item['modifiedTime']}</div>
             <div class="mdui-col-sm-2 mdui-text-right">${item['size']}</div>`
@@ -1456,3 +1424,35 @@ $(function() {
 function updateTable(){
     $("table").wrap("<div class='table-father'></div>");
 }
+
+$(document).ready(function() {
+    $(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
+        var top = $(window).scrollTop();
+        var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
+
+        if(!isMobileDevice){
+            if(top >= 300 && !darkMode){
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".titleBar_link").css("color", "#333");
+                console.log("变色")
+            }
+            else if(top < 300 && !darkMode){
+                $(".titleBar").css("background", "#00000044");
+                $(".titleBar_link").css("color", "#FFFFFF");
+                console.log("变回")
+            }
+        }
+        else{
+            if(top >= 250 && !darkMode){
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".titleBar_link").css("color", "#333");
+                console.log("变色")
+            }
+            else if(top < 250 && !darkMode){
+                $(".titleBar").css("background", "#00000044");
+                $(".titleBar_link").css("color", "#FFFFFF");
+                console.log("变回")
+            }
+        }
+    })
+});
