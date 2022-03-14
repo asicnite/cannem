@@ -8,12 +8,13 @@ body, .bodydiv
 .titleBar_link>i {
     color: #F0F0F0;
 }
-
+.titleBar{
+    background: #111;
+}
 a.titleBar_link:hover {
     background: #2222222f;
 }
 .bimg {
-    background: #333;
     filter: brightness(0.25) blur(0.3em);
 }
 .menu_list p {
