@@ -77,7 +77,7 @@ function init() {
 <div class="mdui-container">
 <a class="large-title" href="/">${title}</a>
 <span class="description">${description}</span>
-<div id="nav" class="mdui-toolbar cannem-item nav-style"> </div>
+<div id="nav" class="mdui-toolbar cannem-item nav-style titleBar_container"> </div>
 </div>
 <header class="titleBar">
   <dir class="titleBar_container">
@@ -129,35 +129,37 @@ html += `
     $('#head_md').hide().html('');
 }
 
-$(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
-    var top = $(window).scrollTop();
-    var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
+$(window).ready(function() {
+    $(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
+        var top = $(window).scrollTop();
+        var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
 
-    if(!isMobileDevice){
-        if(top >= 300 && !darkMode){
-            $(".titleBar").css("background", "##00000022");
-            $(".ttitleBar_link").css("color", "#333");
-            console.log("变色")
+        if(!isMobileDevice){
+            if(top >= 300 && !darkMode){
+                $(".titleBar").css("background", "##00000022");
+                $(".ttitleBar_link").css("color", "#333");
+                console.log("变色")
+            }
+            else if(top < 300 && !darkMode){
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".ttitleBar_link").css("color", "#FFF");
+                console.log("变回")
+            }
         }
-        else if(top < 300 && !darkMode){
-            $(".titleBar").css("background", "#FFFFFF11");
-            $(".ttitleBar_link").css("color", "#FFF");
-            console.log("变回")
+        else{
+            if(top >= 250 && !darkMode){
+                $(".titleBar").css("background", "##00000022");
+                $(".ttitleBar_link").css("color", "#333");
+                console.log("变色")
+            }
+            else if(top < 250 && !darkMode){
+                $(".titleBar").css("background", "#FFFFFF11");
+                $(".ttitleBar_link").css("color", "#FFF");
+                console.log("变回")
+            }
         }
-    }
-    else{
-        if(top >= 250 && !darkMode){
-            $(".titleBar").css("background", "##00000022");
-            $(".ttitleBar_link").css("color", "#333");
-            console.log("变色")
-        }
-        else if(top < 250 && !darkMode){
-            $(".titleBar").css("background", "#FFFFFF11");
-            $(".ttitleBar_link").css("color", "#FFF");
-            console.log("变回")
-        }
-    }
-})
+    })
+});
 
 const Os = {
     isWindows: navigator.platform.toUpperCase().indexOf('WIN') > -1, // .includes
