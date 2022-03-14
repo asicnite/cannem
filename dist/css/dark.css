@@ -1,6 +1,6 @@
 body, .bodydiv
 {
-   background-color: #222 !important;
+   background-color: #111 !important;
 }
 .titleBar_avatar img {
     border-color: #575757;
@@ -12,10 +12,12 @@ body, .bodydiv
 a.titleBar_link:hover {
     background: #2222222f;
 }
-
-.titleBar_exhibit {
-    background: #222;
-    border:none;
+.titleBar{
+    background-color: #111;
+}
+.bimg {
+    background: #333;
+    filter: brightness(0.25) blur(0.3em);
 }
 .menu_list p {
     color: #FFF;
@@ -34,9 +36,6 @@ a.titleBar_link:hover {
   color: #F0F0F0;
 }
 
-.mdui-list-item {
-    border-bottom: 1px solid #2C2C2C;
-}
 
 #count {
     color: #999 !IMPORTANT;
