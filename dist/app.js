@@ -1426,7 +1426,7 @@ function updateTable(){
 }
 
 $(document).ready(function() {
-    $(window).scroll(function(){            //浅色模式下，当titleBar越过bimg 改变颜色
+    window.onscroll = function(){            //浅色模式下，当titleBar越过bimg 改变颜色
         var top = $(window).scrollTop();
         var isMobileDevice = (document.body.clientWidth <= 780) ? true: false;
 
@@ -1442,7 +1442,7 @@ $(document).ready(function() {
                 console.log("变回")
             }
         }
-        else{
+        else if(isMobileDevice){
             if(top >= 250 && !darkMode){
                 $(".titleBar").css("background", "#FFFFFF11");
                 $(".titleBar_link").css("color", "#333");
@@ -1454,6 +1454,5 @@ $(document).ready(function() {
                 console.log("变回")
             }
         }
-    })
+    }
 });
-window.onscroll = function(){console.log($(window).scrollTop())}
