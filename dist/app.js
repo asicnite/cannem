@@ -223,16 +223,16 @@ function nav(path) {
             for (i in arr) {
                 var n = arr[i];
                 n = decodeURI(n);
-                p += n + '.';
+                p += n + '/';
                 if (n == '') {
                     break;
                 }
                 if (i == arr.length - 1) {
-                    html += `<span style="font-weight: bold; font-size:1.4em; color:#FFFFFF33">/</span><span class="folder-last">${n}</span>`;
+                    html += `<span style="font-weight: bold; font-size:1.4em; color:#FFFFFF33">.</span><span class="folder-last">${n}</span>`;
                     break;
                 }
                 else {
-                    html += `<span style="font-weight: bold; font-size:1.4em; color:#FFFFFF33">/</span><a class="folder" href="/${cur}:${p}">${n}</a>`;
+                    html += `<span style="font-weight: bold; font-size:1.4em; color:#FFFFFF33">.</span><a class="folder" href="/${cur}:${p}">${n}</a>`;
                 }
             }
         }

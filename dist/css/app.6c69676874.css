@@ -426,15 +426,18 @@ body{
     }
     .mdui-toolbar {
         top: 190px;
-        overflow-x: hidden;
         padding: 0px 30px;
     }
+    .mdui-toolbar::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+    
     .mdui-toolbar a, .folder-last{
         padding: 0 4px !important;
     }
     .mdui-toolbar > a:first-child {
         margin-right: 5px !important;
-        padding: 0 13px !important;
     }
     .large-title {
         top: 110px;
