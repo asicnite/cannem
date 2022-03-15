@@ -31,10 +31,12 @@ function swticherChange(switcherItem){
         themecss.href = `${ThemeConfig.url}@${version}/dist/css/dark.css`;
         document.cookie = "darkMode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "darkMode=true; expires=Thu, 18 Dec 2032 12:00:00; path=/";
+        darkMode = true;
     } else {
         themecss.href = `${ThemeConfig.url}@${version}/dist/css/light.css`;
         document.cookie = "darkMode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "darkMode=false; expires=Thu, 18 Dec 2032 12:00:00; path=/";
+        darkMode = false;
     }
 }
 
@@ -77,7 +79,7 @@ function init() {
 <div class="mdui-container">
 <a class="large-title" href="/">${title}</a>
 <span class="description">${description}</span>
-<div id="nav" class="mdui-toolbar cannem-item nav-style"> </div>
+<div id="nav" class="mdui-toolbar nav-style"> </div>
 </div>
 <header class="titleBar">
   <dir class="titleBar_container">
@@ -221,7 +223,7 @@ function nav(path) {
             for (i in arr) {
                 var n = arr[i];
                 n = decodeURI(n);
-                p += n + '/';
+                p += n + '.';
                 if (n == '') {
                     break;
                 }
