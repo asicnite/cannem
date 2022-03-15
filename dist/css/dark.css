@@ -9,7 +9,7 @@ body, .bodydiv
     color: #F0F0F0;
 }
 .titleBar{
-    background: #111;
+    background: #11111144;
 }
 a.titleBar_link:hover {
     background: #2222222f;
