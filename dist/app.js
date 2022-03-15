@@ -1435,24 +1435,24 @@ $(document).ready(function() {
         if(!isMobileDevice){
             if(top >= 300 && !darkMode){
                 $(".titleBar").css("background", "#FFFFFF11");
-                $(".titleBar_link").css("color", "#333");
+                $(".titleBar_link>i").$('i').css("color", "#333");
                 console.log("变色")
             }
             else if(top < 300 && !darkMode){
                 $(".titleBar").css("background", "#00000044");
-                $(".titleBar_link").css("color", "#FFFFFF");
+                $(".titleBar_link>i").css("color", "#FFFFFF");
                 console.log("变回")
             }
         }
         else if(isMobileDevice){
             if(top >= 250 && !darkMode){
                 $(".titleBar").css("background", "#FFFFFF11");
-                $(".titleBar_link").css("color", "#333");
+                $(".titleBar_link>i").css("color", "#333");
                 console.log("变色")
             }
             else if(top < 250 && !darkMode){
                 $(".titleBar").css("background", "#00000044");
-                $(".titleBar_link").css("color", "#FFFFFF");
+                $(".titleBar_link>i").css("color", "#FFFFFF");
                 console.log("变回")
             }
         }
