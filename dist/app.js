@@ -28,17 +28,15 @@ var checkStatu = darkMode ? 'checked' : '';
 const themeChanger = `<label><input class="switcher switcher-anime" onchange="swticherChange(this)" type="checkbox" ${checkStatu}></label>`;
 function swticherChange(switcherItem){
     if (switcherItem.checked == true){
-        themecss.type = '';
         themecss.href = `${ThemeConfig.url}@${version}/dist/css/dark.css`;
-        themecss.type = 'text/css';
         document.cookie = "darkMode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "darkMode=true; expires=Thu, 18 Dec 2032 12:00:00; path=/";
+        darkMode = true;
     } else {
-        themecss.type = '';
         themecss.href = `${ThemeConfig.url}@${version}/dist/css/light.css`;
-        themecss.type = 'text/css';
         document.cookie = "darkMode=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         document.cookie = "darkMode=false; expires=Thu, 18 Dec 2032 12:00:00; path=/";
+        darkMode = false;
     }
 }
 
